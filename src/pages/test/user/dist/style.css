@@ -1,0 +1,32 @@
+.user-item {
+  padding: 15px;
+}
+.user-item .main-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.user-item .title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.user-item .word-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 15px 0;
+}
+.user-item .user-know {
+  width: 140px;
+  height: 50px;
+  color: #fff;
+  background-color: #741f1f;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.user-item .user-know .link {
+  color: #fff;
+}
