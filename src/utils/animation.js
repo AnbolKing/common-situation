@@ -1,7 +1,7 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition} from 'react-transition-group';
 import { Route, Switch } from 'react-router-dom';
-import '../assets/router.css';
+import '../assets/css/router.css';
 
 const AnimatedSwitch = props => {
   const { children } = props
