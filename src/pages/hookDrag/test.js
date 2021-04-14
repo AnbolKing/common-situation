@@ -1,5 +1,5 @@
 import React from 'react';
-import Draggable from './index';
+import Draggable from './dragger';
 
 const HookDrag = () => {
   return (
