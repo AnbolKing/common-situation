@@ -11,6 +11,7 @@ import TestLogin from './pages/routerAnimation/login/index';
 import TestUser from './pages/routerAnimation/user/index';
 import ImgLazy from './pages/imgLazy/index';
 import MasonryLayout from './pages/masonryLayout/index';
+import InfiniteScroll from './pages/infiniteScroll/index';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route exact path='/error' component={Error} />
         <Route exact path='/imgLazy' component={ImgLazy}/>
         <Route exact path='/masonryLayout' component={MasonryLayout}/>
+        <Route exact path='/infiniteScroll' component={InfiniteScroll}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
