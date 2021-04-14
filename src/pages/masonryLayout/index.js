@@ -94,11 +94,17 @@ const MasonryLayout = () => {
       }
     }
   }
+  const handleResize = () => {
+    window.location.reload();
+  }
   useEffect(() => {
     window.addEventListener('load', handleInitGetImgs, true)
   });
   useEffect(() => {
     window.addEventListener('scroll', throttle(handleLoadMore, 50), true)
+  })
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, true);
   })
   return (
     <div className="container">
