@@ -11,6 +11,7 @@ const MasonryLayout = () => {
   const prev = useRef(null);
   const colHeight = useRef([]);
   const page = useRef(0);
+  const tmpImg = useRef([])
   const [allImg, setAllImg] = useState([]);
   const handleGetImg = async () => {
     let imgsArr = [];
@@ -56,16 +57,22 @@ const MasonryLayout = () => {
     colNum.current = Math.floor(screenWidth/200);
     colHeight.current = new Array(colNum.current).fill(0)
     handleComputeColHeight(imgsArr);
-    setAllImg([...allImg, ...imgsArr])
+    let prevArr = allImg;
+    prevArr = prevArr.concat(imgsArr);
+    console.log('init');
+    tmpImg.current = prevArr;
+    console.log(tmpImg);
+    setAllImg(prevArr)
   }
   const handleLoadMore = async (e) => {
     const { scrollTop, scrollHeight, clientHeight } = e.target;
     if(scrollTop+clientHeight+100 > scrollHeight) {
       let data = await handleGetImg();
       handleComputeColHeight(data);
-      console.log(data);
-      setAllImg([...allImg, ...data])
-    //  handleCreateImg(data)  
+      tmpImg.current = tmpImg.current.concat(data);
+      console.log('scroll');
+      console.log(tmpImg);
+      setAllImg(tmpImg.current)
     }
   }
   const handleRender = () => {
