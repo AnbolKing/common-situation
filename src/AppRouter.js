@@ -12,6 +12,7 @@ import TestUser from './pages/routerAnimation/user/index';
 import ImgLazy from './pages/imgLazy/index';
 import MasonryLayout from './pages/masonryLayout/index';
 import InfiniteScroll from './pages/infiniteScroll/index';
+import HookDrag from './pages/hookDrag/test';
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ const AppRouter = () => {
         <Route exact path='/imgLazy' component={ImgLazy}/>
         <Route exact path='/masonryLayout' component={MasonryLayout}/>
         <Route exact path='/infiniteScroll' component={InfiniteScroll}/>
+        <Route exact path='/hookDrag' component={HookDrag}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
