@@ -8,6 +8,7 @@ import './style.less';
 const UploadFile = (props) => {
   const { accept, limit, multiple, action, data, onProgress } = props;
   const fileInput = useRef(null);
+  // eslint-disable-next-line
   const [fileInfo, setFileInfo] = useState([]);
   const handleUpdateFile = (fileInfo, newStatus) => {
     setFileInfo(prevList => {
