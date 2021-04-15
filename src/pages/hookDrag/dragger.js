@@ -78,7 +78,7 @@ const Draggable = ({ id, onDragEnd, onDrag, children }) => {
     return {
       cursor: state.isDragging ? '-webkit-grabbing' : '-webkit-grab',
       transform: `translate(${state.translation.x}px, ${state.translation.y}px)`,
-      translation: state.isDragging ? 'none' : 'transform 500ms',
+      transition: state.isDragging ? 'none' : 'transform 500ms',
       zIndex: state.isDragging ? 2 : 1,
       position: state.isDragging ? 'absolute' : 'relative',
     }

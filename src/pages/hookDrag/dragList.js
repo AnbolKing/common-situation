@@ -42,7 +42,6 @@ const DragList = () => {
           const isDragging = index===state.draggedIndex;
           const top = state.dragOrder.indexOf(index) * (80+10);
           const draggedTop = state.order.indexOf(index) * (80+10);
-
           return (
             <Draggable
               key={index}
