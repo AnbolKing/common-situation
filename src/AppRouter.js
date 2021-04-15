@@ -14,6 +14,7 @@ import MasonryLayout from './pages/masonryLayout/index';
 import InfiniteScroll from './pages/infiniteScroll/index';
 import HookDrag from './pages/hookDrag/test';
 import DragList from './pages/hookDrag/dragList';
+import MaskTest from './pages/maskModel/test';
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
         <Route exact path='/infiniteScroll' component={InfiniteScroll}/>
         <Route exact path='/hookDrag' component={HookDrag}/>
         <Route exact path='/dragList' component={DragList}/>
+        <Route exact path='/maskModel' component={MaskTest}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
