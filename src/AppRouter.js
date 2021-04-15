@@ -15,6 +15,7 @@ import InfiniteScroll from './pages/infiniteScroll/index';
 import HookDrag from './pages/hookDrag/test';
 import DragList from './pages/hookDrag/dragList';
 import MaskTest from './pages/maskModel/test';
+import UploadFile from './pages/uploadFile/index';
 
 const AppRouter = () => {
   return (
@@ -28,6 +29,7 @@ const AppRouter = () => {
         <Route exact path='/hookDrag' component={HookDrag}/>
         <Route exact path='/dragList' component={DragList}/>
         <Route exact path='/maskModel' component={MaskTest}/>
+        <Route exact path='/uploadFile' component={UploadFile}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
