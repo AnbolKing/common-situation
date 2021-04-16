@@ -32,9 +32,11 @@ const LightInput = () => {
   }
   const handleHighLight = (string) => {
     function highlight(value) {
-      return `<span style="search-light" >${value}</span>`
+      return `<span class="search-light">${value}</span>`
     }
-    return string.replace(new RegExp(content, 'ig'), content => highlight(content))
+    let res = string.replace(new RegExp(content, 'ig'), content => highlight(content))
+    console.log(res);
+    return res;
   }
   const handleRenderList = () => {
     return (
@@ -45,9 +47,10 @@ const LightInput = () => {
               dataSource={data}
               renderItem={item => {
                 return (
-                  <List.Item>
-                    {handleHighLight(item.name)}
-                  </List.Item>
+                  // <List.Item >
+                  //   {handleHighLight(item.name)}
+                  // </List.Item>
+                  <li className='ant-list-item' dangerouslySetInnerHTML={{__html: handleHighLight(item.name)}} />
                 )
               }}
             />
