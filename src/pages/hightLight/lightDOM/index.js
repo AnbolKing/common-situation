@@ -58,6 +58,7 @@ const DOMHighLight = () => {
       id: '67890',
     },
   ])
+  // eslint-disable-next-line
   const [content, setContent] = useState('');
   const timer = useRef(null);
   const search = useRef('');
