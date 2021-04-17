@@ -18,6 +18,7 @@ import MaskTest from './pages/maskModel/test';
 import UploadFile from './pages/uploadFile/index';
 import LightInput from './pages/hightLight/lightInput/index';
 import DOMHightLight from './pages/hightLight/lightDOM/index';
+import Chat from './pages/chat/index';
 
 const AppRouter = () => {
   return (
@@ -34,6 +35,7 @@ const AppRouter = () => {
         <Route exact path='/uploadFile' component={UploadFile}/>
         <Route exact path='/lightInput' component={LightInput}/>
         <Route exact path='/lightDOM' component={DOMHightLight}/>
+        <Route exact path='/chat' component={Chat}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
