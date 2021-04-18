@@ -4,12 +4,14 @@ import React, {
 } from 'react';
 import './style.less';
 
+const WIDTH = document.body.offsetWidth;
+
 const CanvasSign = () => {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const handleRemove = () => {
-    ctxRef.current.clearRect(0, 0, 300, 150);
-    ctxRef.current.strokeRect(0, 0, 350, 150);
+    ctxRef.current.clearRect(0, 0, WIDTH, 200);
+    ctxRef.current.fillRect(0, 0, WIDTH, 200);
   }
   const handleSave = () => {
     let base64Img = canvasRef.current.toDataURL();
@@ -25,15 +27,18 @@ const CanvasSign = () => {
     ctxRef.current.stroke();
   }
   useEffect(() => {
+    console.log(WIDTH);
     let canvas = canvasRef.current;
+    canvas.width = WIDTH;
+    canvas.height = 200
     if(canvas.getContext) {
       let ctx = canvas.getContext('2d');
       ctxRef.current = ctx;
       // canvas operation start
       ctx.lineCap = 'round';
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#F7EED6';
       ctx.lineWidth = 2;
-      ctx.strokeRect(0, 0, 350, 150);
+      ctx.fillRect(0, 0, WIDTH, 200);
       // canvas operation end
       canvas.addEventListener('touchstart', handleStart);
       canvas.addEventListener('touchmove', handleMove);
@@ -45,7 +50,7 @@ const CanvasSign = () => {
   }, [])
   return (
     <div className="canvas-container">
-      <div>
+      <div className="canvas-item">
         <canvas id="mycanvas" ref={canvasRef} className="canvas">
           No Support
         </canvas>
