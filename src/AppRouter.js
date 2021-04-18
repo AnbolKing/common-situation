@@ -20,6 +20,7 @@ import LightInput from './pages/hightLight/lightInput/index';
 import DOMHightLight from './pages/hightLight/lightDOM/index';
 import Chat from './pages/chat/index';
 import CanvasSign from './pages/canvasSign/index';
+import CanvasCard from './pages/canvasSign/gua';
 
 const AppRouter = () => {
   return (
@@ -38,6 +39,7 @@ const AppRouter = () => {
         <Route exact path='/lightDOM' component={DOMHightLight}/>
         <Route exact path='/chat' component={Chat}/>
         <Route exact path='/canvasSign' component={CanvasSign}/>
+        <Route exact path='/canvasCard' component={CanvasCard}/>
         <AnimatedSwitch>
           <Route exact path='/testLogin' component={TestLogin} />
           <Route exact path='/testuser' component={TestUser}/>
