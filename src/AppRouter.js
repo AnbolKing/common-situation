@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch
 } from 'react-router-dom';
@@ -24,7 +24,7 @@ import CanvasCard from './pages/canvasSign/gua';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route exact path='/error' component={Error} />
@@ -45,7 +45,7 @@ const AppRouter = () => {
           <Route exact path='/testuser' component={TestUser}/>
         </AnimatedSwitch>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   )
 };
 
